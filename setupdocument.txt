@@ -1,0 +1,6 @@
+1. Create an Amazon Developer Account
+2. Navigate to Develop Apps
+3. Click Select Account
+4. Click Add New Application Client
+5. Go to the Application List and retrieve the following credentials:
+    - AMAZON_LWA_CLIENT_ID, AMAZON_LWA_CLIENT_SECRET, AMAZON_LWA_REFRESH_TOKEN
