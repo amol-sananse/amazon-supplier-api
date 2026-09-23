@@ -79,26 +79,21 @@ class AmazonController extends Controller
             
             $baseEndpoint = rtrim(config('services.amazon.endpoint'),'/');
 
-            $marketplaceId = config('services.amazon.marketplace_id');
-
-            $url = $baseEndpoint . '/catalog/2022-04-01/items';
-
             $marketplaceId   = $request->query('marketplaceIds', config('services.amazon.marketplace_id'));
-            $identifiers     = $request->query('identifiers');
-            $identifiersType = $request->query('identifiersType', 'ASIN');
-            $includedData    = $request->query('includedData', 'summaries,attributes,dimensions,images,productTypes');
-
-            if (!$identifiers) {
-                return response()->json([
-                    'success' => false, 
-                    'message' => 'The "identifiers" query parameter (ASIN) is required for production lookups.'
+            $asin = $request->query('asin');
+            
+            if (!$asin) {
+               return response()->json([
+                    'success' => false,
+                    'message' => 'asin is required',
                 ], 400);
             }
+
+            $url = $baseEndpoint . '/catalog/2022-04-01/items/'. urlencode($asin);
+
             $queryParams = [
-                'marketplaceIds'  => (string) $marketplaceId,
-                'identifiers'     => (string) $identifiers,
-                'identifiersType' => (string) $identifiersType,
-                'includedData'    => (string) $includedData,
+                'marketplaceIds' => $marketplaceId,
+                'includedData' => 'summaries',
             ];
 
             $response = Http::withHeaders([
