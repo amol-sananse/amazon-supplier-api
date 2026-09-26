@@ -1,3 +1,26 @@
+
+=========================================
+Amazon Seller central India
+=========================================
+https://sellercentral.amazon.in/insoa/registration/tax
+Name: Amol Sananse
+Mobile: 7559163721
+Password: Vipanika@4930
+YOUR SELLER ID: AHU6MDI84AYJK
+https://sell.amazon.in/newgstupdates
+
+
+========================================
+AMAZON / AWS / S3 BUCKET
+========================================
+https://ap-south-1.console.aws.amazon.com/
+https://console.aws.amazon.com/console/home
+Email: support+1@hositlabs.com
+User: hositlabs1
+Pass: HOSitlabs@4930
+
+
+
 1. Create an Amazon Developer Account
 2. Navigate to Develop Apps
 3. Click Select Account
